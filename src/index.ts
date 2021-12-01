@@ -38,10 +38,10 @@ async function job(user: string) {
 
 const app: express.Application = express();
 
-app.get('/', async (req: express.Request, res: express.Response) => {
+app.get('/:username', async (req: express.Request, res: express.Response) => {
 
     try {
-        const data = await job(process.env.username || 'none');
+        const data = await job(req.params.username);
         res.status(200).json(data);
     } catch (err) {
         res.status(400).json({ message: 'Something went wrong!'});
