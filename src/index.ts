@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 import { addForkCount, extractFromPR, handleError } from './util';
 import { PullRequest } from './interface';
+import express from 'express';
 dotenv.config();
 
 // Collect PRs, extract information, sort by fork count
@@ -35,6 +36,16 @@ async function job(user: string) {
     }
 }
 
-job(process.env.username || 'none')
-.then((result) => console.log(result))
-.catch((err) => console.log(err));
+const app: express.Application = express();
+
+app.get('/', async (req: express.Request, res: express.Response) => {
+
+    try {
+        const data = await job(process.env.username || 'none');
+        res.status(200).json(data);
+    } catch (err) {
+        handleError(err, 'GET /');
+    }
+});
+
+app.listen(process.env.PORT || 8080, () => console.log('Collector is up!'));
