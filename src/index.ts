@@ -44,6 +44,7 @@ app.get('/', async (req: express.Request, res: express.Response) => {
         const data = await job(process.env.username || 'none');
         res.status(200).json(data);
     } catch (err) {
+        res.status(400).json({ message: 'Something went wrong!'});
         handleError(err, 'GET /');
     }
 });
