@@ -7,6 +7,12 @@ collector is a small tool I wrote for fun. It's job is to show the top 5 contrib
 - Personally, I am trying to see if I can integrate this with my portfolio site. Results of this service could be used for showcasing.
 - For others, technical recruiters might wanna use this to form some level of judgement of users based on their GitHub profiles.
 
+## usage
+
+```bash
+$ curl https://vnxcollector.herokuapp.com/${username}
+```
+
 ## setup and build
 
 ```bash
