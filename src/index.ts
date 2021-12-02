@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { addForkCount, extractFromPR, handleError } from './util';
 import { PullRequest } from './interface';
 import express from 'express';
+import cors from 'cors';
 dotenv.config();
 
 // Collect PRs, extract information, sort by fork count
@@ -37,7 +38,7 @@ async function job(user: string) {
 }
 
 const app: express.Application = express();
-
+app.use(cors());
 app.get('/:username', async (req: express.Request, res: express.Response) => {
 
     try {
