@@ -6,7 +6,7 @@ collector is a small tool I wrote for fun. It's job is to show the top 5 contrib
 
 ## why
 
-- Personally, I am trying to see if I can integrate this with my portfolio site. Results of this service could be used for showcasing.
+- Personally, I built this for the [work page](https://vivekn.dev/work/) of my website.
 - For others, technical recruiters might wanna use this to form some level of judgement of users based on their GitHub profiles.
 
 ## usage
