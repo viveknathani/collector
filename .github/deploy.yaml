@@ -1,0 +1,19 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: deploy
+        uses: akhileshns/heroku-deploy@v3.0.0
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "vnxcollector"
+          heroku_email: "viveknathani2402@gmail.com"
