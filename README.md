@@ -15,7 +15,7 @@ collector is a small tool I wrote for fun. It's job is to show the top 5 contrib
 $ curl https://vnxcollector.herokuapp.com/${username}
 ```
 
-or visit https://vnxcollector.netlify.app/ 
+or visit https://collector.vivekn.dev/ 
 
 ## setup and build
 
