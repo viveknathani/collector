@@ -2,6 +2,8 @@
 
 collector is a small tool I wrote for fun. It's job is to show the top 5 contributions of a user on GitHub. Currently, only merged pull requests count as contributions. Ranking is based on how many forks the corresponding repository has.
 
+[![build](https://github.com/viveknathani/collector/actions/workflows/build.yaml/badge.svg)](https://github.com/viveknathani/collector/actions/workflows/build.yaml) [![deploy](https://github.com/viveknathani/collector/actions/workflows/deploy.yaml/badge.svg)](https://github.com/viveknathani/collector/actions/workflows/deploy.yaml) [![Maintainability](https://api.codeclimate.com/v1/badges/455b6da321febf56a0dc/maintainability)](https://codeclimate.com/github/viveknathani/collector/maintainability)
+
 ## why
 
 - Personally, I am trying to see if I can integrate this with my portfolio site. Results of this service could be used for showcasing.
